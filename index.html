@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Izaho29</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        .page {
+            width: 100%;
+            max-width: 720px;
+            margin: auto;
+            background: white;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .profile {
+            text-align: center;
+            padding: 30px 20px 20px;
+        }
+
+        .profile-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            background: #ddd;
+            display: block;
+            margin: 0 auto 12px;
+        }
+
+        .name {
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        .verified {
+            color: #1877f2;
+            font-size: 18px;
+        }
+
+        .location {
+            color: #777;
+            margin-top: 5px;
+        }
+
+        /* Rating */
+        .rating {
+            margin-top: 12px;
+            font-size: 18px;
+        }
+
+        .stars {
+            color: #f5b400;
+            letter-spacing: 2px;
+        }
+
+        /* Stats */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            margin: 18px 0;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 20px;
+        }
+
+        .stat span {
+            color: #777;
+            font-size: 13px;
+        }
+
+        /* Ad */
+        .ad-box {
+            margin: 10px 20px 20px;
+            min-height: 110px;
+            border-radius: 12px;
+            background: #eeeeee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 14px;
+        }
+
+        /* Buttons */
+        .buttons {
+            display: flex;
+            gap: 10px;
+            padding: 0 20px 20px;
+        }
+
+        .buttons button {
+            flex: 1;
+            border: none;
+            border-radius: 9px;
+            padding: 13px 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .explicit {
+            background: #222;
+            color: white;
+        }
+
+        .live {
+            background: #e91e63;
+            color: white;
+        }
+
+        /* Main content */
+        .content {
+            padding: 0 20px 30px;
+        }
+
+        .content-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 380px;
+            overflow: hidden;
+            border-radius: 14px;
+            background: #ddd;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 42px;
+            height: 42px;
+            border: none;
+            border-radius: 50%;
+            background: rgba(0,0,0,.55);
+            color: white;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 12px;
+        }
+
+        .next {
+            right: 12px;
+        }
+
+        .join-button {
+            display: block;
+            width: 100%;
+            margin-top: 15px;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background: #e91e63;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Popup */
+        .overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,.72);
+            z-index: 999;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .popup {
+            position: relative;
+            width: 100%;
+            max-width: 420px;
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .close {
+            position: absolute;
+            top: 8px;
+            right: 12px;
+            border: none;
+            background: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .popup h2 {
+            margin-bottom: 10px;
+        }
+
+        .popup p {
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 18px;
+        }
+
+        .popup-button {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            border-radius: 9px;
+            background: #e91e63;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media (max-width: 500px) {
+            .slider {
+                height: 320px;
+            }
+
+            .stats {
+                gap: 22px;
+            }
+
+            .buttons button {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <section class="profile">
+
+        <img
+            class="profile-img"
+            src="image/profile.webp"
+            alt="Profile">
+
+        <div class="name">
+            Izaho29 <span class="verified">✓</span>
+        </div>
+
+        <div class="location">
+            🇺🇸 United States
+        </div>
+
+        <div class="rating">
+            <span class="stars">★★★★★</span>
+            <span> 5.0</span>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <strong>24</strong>
+                <span>Videos</span>
+            </div>
+
+            <div class="stat">
+                <strong>86</strong>
+                <span>Photos</span>
+            </div>
+
+            <div class="stat">
+                <strong>18+</strong>
+                <span>Content</span>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="ad-box">
+        AFFILIATE AD
+    </div>
+
+    <div class="buttons">
+        <button class="explicit" onclick="openPopup()">
+            🔞 Explicit Content
+        </button>
+
+        <button class="live" onclick="openPopup()">
+            🔴 +18 Livestream
+        </button>
+    </div>
+
+    <section class="content">
+
+        <div class="content-title">
+            Featured Content
+        </div>
+
+        <div class="slider">
+
+            <img
+                id="slideImage"
+                class="slide"
+                src="image/images.jpg"
+                alt="Featured">
+
+            <button class="arrow prev" onclick="previousSlide()">‹</button>
+            <button class="arrow next" onclick="nextSlide()">›</button>
+
+        </div>
+
+        <button class="join-button" onclick="openPopup()">
+            View More
+        </button>
+
+    </section>
+
+</div>
+
+<!-- Popup -->
+<div class="overlay" id="popup">
+
+    <div class="popup">
+
+        <button class="close" onclick="closePopup()">×</button>
+
+        <h2>18+ Content</h2>
+
+        <p>
+            Continue to the available offer and explore more content.
+        </p>
+
+        <a
+            class="popup-button"
+            href="#"
+            onclick="return false;">
+            Join for Free
+        </a>
+
+    </div>
+
+</div>
+
+<script>
+
+    const slides = [
+        "image/images.jpg",
+        "image/images (1).jpg",
+        "image/images (2).jpg"
+    ];
+
+    let currentSlide = 0;
+
+    function showSlide() {
+        document.getElementById("slideImage").src = slides[currentSlide];
+    }
+
+    function nextSlide() {
+        currentSlide++;
+
+        if (currentSlide >= slides.length) {
+            currentSlide = 0;
+        }
+
+        showSlide();
+    }
+
+    function previousSlide() {
+        currentSlide--;
+
+        if (currentSlide < 0) {
+            currentSlide = slides.length - 1;
+        }
+
+        showSlide();
+    }
+
+    function openPopup() {
+        document.getElementById("popup").style.display = "flex";
+    }
+
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+
+</script>
+
+</body>
+</html>
