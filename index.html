@@ -155,6 +155,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: block;
         }
 
         .arrow {
@@ -270,7 +271,7 @@
 
         <img
             class="profile-img"
-            src="image/profile.webp"
+            src="iamge/profile.webp"
             alt="Profile">
 
         <div class="name">
@@ -330,7 +331,7 @@
             <img
                 id="slideImage"
                 class="slide"
-                src="image/images.jpg"
+                src="iamge/images.jpg"
                 alt="Featured">
 
             <button class="arrow prev" onclick="previousSlide()">‹</button>
@@ -373,9 +374,10 @@
 <script>
 
     const slides = [
-        "image/images.jpg",
-        "image/images (1).jpg",
-        "image/images (2).jpg"
+        "iamge/images.jpg",
+        "iamge/images (1).jpg",
+        "iamge/images (2).jpg",
+        "iamge/images (3).jpg"
     ];
 
     let currentSlide = 0;
