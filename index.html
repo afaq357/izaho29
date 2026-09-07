@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,324 +8,421 @@
 
 <style>
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f5f5f5;
-    color: #222;
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f5f5;
+    color:#222;
 }
 
-.container {
-    width: 100%;
-    max-width: 480px;
-    margin: 0 auto;
-    background: #fff;
-    min-height: 100vh;
-    box-shadow: 0 0 20px rgba(0,0,0,0.08);
+.container{
+    width:100%;
+    max-width:480px;
+    min-height:100vh;
+    margin:auto;
+    background:#fff;
 }
 
 /* PROFILE */
 
-.profile {
-    text-align: center;
-    padding: 28px 20px 18px;
+.profile{
+    text-align:center;
+    padding:28px 20px 18px;
 }
 
-.profile-image {
-    width: 105px;
-    height: 105px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #fff;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.18);
+.profile-image{
+    width:105px;
+    height:105px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #fff;
+    box-shadow:0 4px 15px rgba(0,0,0,.18);
 }
 
-.name {
-    margin-top: 12px;
-    font-size: 24px;
-    font-weight: 700;
+.name{
+    margin-top:12px;
+    font-size:24px;
+    font-weight:700;
 }
 
-.verified {
-    color: #1877f2;
-    font-size: 17px;
+.verified{
+    color:#1877f2;
 }
 
-.location {
-    margin-top: 6px;
-    color: #777;
-    font-size: 14px;
+.location{
+    margin-top:6px;
+    color:#777;
+    font-size:14px;
 }
 
-.rating {
-    margin-top: 7px;
-    font-size: 14px;
-    color: #555;
+.rating{
+    margin-top:7px;
+    color:#555;
 }
 
 /* STATS */
 
-.stats {
-    display: flex;
-    justify-content: center;
-    gap: 32px;
-    padding: 15px 10px 20px;
-    border-bottom: 1px solid #eee;
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:32px;
+    padding:15px 10px 20px;
+    border-bottom:1px solid #eee;
 }
 
-.stat {
-    text-align: center;
-    min-width: 80px;
+.stat{
+    text-align:center;
+    min-width:80px;
 }
 
-.stat strong {
-    display: block;
-    font-size: 20px;
-    font-weight: 700;
+.stat strong{
+    display:block;
+    font-size:20px;
 }
 
-.stat span {
-    color: #777;
-    font-size: 13px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
+.stat span{
+    color:#777;
+    font-size:13px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:4px;
 }
 
-.stat-icon {
-    font-size: 12px;
-    line-height: 1;
+.stat-icon{
+    font-size:12px;
 }
 
-/* AD */
+/* BANNER */
 
-.ad-box {
-    margin: 10px 20px 20px;
-    min-height: 110px;
-    border-radius: 12px;
-    background: #eeeeee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+.ad-box{
+    margin:10px 20px 20px;
+    min-height:110px;
+    border-radius:12px;
+    background:#eee;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
 }
 
-.ad-box a {
-    display: block;
-    line-height: 0;
+.ad-box a{
+    display:block;
+    line-height:0;
 }
 
-.ad-box img {
-    display: block;
-    width: 305px;
-    height: 99px;
-    max-width: 100%;
-    object-fit: contain;
+.ad-box img{
+    display:block;
+    width:305px;
+    height:99px;
+    max-width:100%;
+    object-fit:contain;
 }
 
 /* BUTTONS */
 
-.buttons {
-    display: flex;
-    gap: 10px;
-    padding: 0 20px;
+.buttons{
+    display:flex;
+    gap:10px;
+    padding:0 20px;
 }
 
-.buttons button {
-    flex: 1;
-    border: none;
-    padding: 13px 8px;
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
+.buttons button{
+    flex:1;
+    border:0;
+    padding:13px 8px;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:600;
 }
 
-.explicit {
-    background: #222;
-    color: #fff;
+.explicit{
+    background:#222;
+    color:#fff;
 }
 
-.live {
-    background: #e53935;
-    color: #fff;
+.live{
+    background:#e53935;
+    color:#fff;
 }
 
 /* FEATURED */
 
-.featured {
-    padding: 25px 20px 10px;
+.featured{
+    padding:25px 20px 10px;
 }
 
-.featured-title {
-    font-size: 19px;
-    font-weight: 700;
-    margin-bottom: 12px;
+.featured-title{
+    font-size:19px;
+    font-weight:700;
+    margin-bottom:12px;
 }
 
-.slider {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-    border-radius: 14px;
-    background: #eee;
+.slider{
+    position:relative;
+    width:100%;
+    height:300px;
+    overflow:hidden;
+    border-radius:14px;
+    background:#eee;
 }
 
-.slide-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+.slide-image{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
-/* SLIDER ARROWS */
-
-.slider-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 38px;
-    height: 38px;
-    border: none;
-    border-radius: 50%;
-    background: rgba(0,0,0,0.55);
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 5;
+.slider-arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:38px;
+    height:38px;
+    border:0;
+    border-radius:50%;
+    background:rgba(0,0,0,.55);
+    color:white;
+    font-size:24px;
 }
 
-.prev {
-    left: 10px;
+.prev{
+    left:10px;
 }
 
-.next {
-    right: 10px;
+.next{
+    right:10px;
 }
 
 /* VIEW MORE */
 
-.view-more {
-    padding: 18px 20px 30px;
+.view-more{
+    padding:18px 20px 30px;
 }
 
-.join-button {
-    width: 100%;
-    border: none;
-    background: #111;
-    color: #fff;
-    padding: 14px;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
+.join-button{
+    width:100%;
+    border:0;
+    background:#111;
+    color:#fff;
+    padding:14px;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:600;
 }
 
-/* POPUP OVERLAY */
+/* =================================
+   REFERENCE STYLE POPUP
+================================= */
 
-.overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.72);
-    z-index: 9999;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+.overlay{
+    display:none;
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.72);
+    z-index:99999;
+    align-items:center;
+    justify-content:center;
+    padding:18px;
 }
 
-/* POPUP */
-
-.popup {
-    position: relative;
-    width: 100%;
-    max-width: 390px;
-    background: #fff;
-    border-radius: 18px;
-    padding: 30px 22px 24px;
-    text-align: center;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
-    animation: popupIn 0.2s ease-out;
+.popup{
+    position:relative;
+    width:100%;
+    max-width:390px;
+    background:#fff;
+    border-radius:18px;
+    padding:26px 20px 22px;
+    text-align:center;
+    box-shadow:0 15px 50px rgba(0,0,0,.4);
+    animation:popupShow .2s ease-out;
 }
 
-@keyframes popupIn {
-    from {
-        transform: scale(0.92);
-        opacity: 0;
+@keyframes popupShow{
+    from{
+        transform:scale(.90);
+        opacity:0;
     }
-
-    to {
-        transform: scale(1);
-        opacity: 1;
+    to{
+        transform:scale(1);
+        opacity:1;
     }
 }
 
-.popup h2 {
-    margin: 0 0 12px;
-    font-size: 24px;
+/* ROUND X */
+
+.popup-close{
+    position:absolute;
+    right:-9px;
+    top:-9px;
+
+    width:38px;
+    height:38px;
+
+    border:3px solid #fff;
+    border-radius:50%;
+
+    background:#222;
+    color:#fff;
+
+    font-size:24px;
+    line-height:30px;
+    font-weight:400;
+
+    cursor:pointer;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.3);
 }
 
-.popup p {
-    color: #666;
-    line-height: 1.5;
-    margin-bottom: 22px;
-    font-size: 15px;
+/* GREEN TITLE */
+
+.popup-title{
+    color:#20b866;
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:12px;
 }
 
-/* CLOSE BUTTON */
+/* TEXT */
 
-.close {
-    position: absolute;
-    top: 9px;
-    right: 10px;
-    width: 34px;
-    height: 34px;
-    border: 0;
-    border-radius: 50%;
-    background: #eee;
-    color: #333;
-    font-size: 25px;
-    line-height: 30px;
-    cursor: pointer;
+.popup-description{
+    font-size:15px;
+    color:#444;
+    line-height:1.45;
+    margin-bottom:17px;
 }
 
-/* POPUP BUTTON */
+/* STEPS */
 
-.popup-button {
-    width: 100%;
-    padding: 14px;
-    border: none;
-    border-radius: 25px;
-    background: #111;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
+.steps{
+    text-align:left;
+    margin:0 auto 18px;
+    max-width:315px;
+}
+
+.step{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    margin-bottom:10px;
+    font-size:14px;
+    line-height:1.35;
+    color:#333;
+}
+
+.step-number{
+    flex-shrink:0;
+
+    width:24px;
+    height:24px;
+
+    border-radius:50%;
+
+    background:#20b866;
+    color:#fff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:13px;
+    font-weight:700;
+}
+
+/* POPUP BANNER AREA */
+
+.popup-banner{
+    width:100%;
+    height:105px;
+
+    border-radius:10px;
+
+    background:#f0f0f0;
+
+    margin:5px 0 18px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    overflow:hidden;
+}
+
+.popup-banner img{
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+}
+
+/* BLACK PILL BUTTON */
+
+.popup-continue{
+    width:100%;
+    height:54px;
+
+    border:0;
+    border-radius:30px;
+
+    background:#111;
+    color:#fff;
+
+    font-size:17px;
+    font-weight:700;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+
+    cursor:pointer;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.2);
+}
+
+/* GREEN LOCK */
+
+.lock-icon{
+    width:22px;
+    height:22px;
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#20b866;
+    font-size:20px;
 }
 
 /* MOBILE */
 
-@media (max-width: 420px) {
+@media(max-width:420px){
 
-    .stats {
-        gap: 18px;
+    .popup{
+        max-width:365px;
+        padding:24px 17px 19px;
     }
 
-    .slider {
-        height: 270px;
+    .popup-title{
+        font-size:21px;
     }
 
-    .buttons button {
-        font-size: 13px;
+    .popup-description{
+        font-size:14px;
+    }
+
+    .step{
+        font-size:13.5px;
+    }
+
+    .popup-banner{
+        height:95px;
     }
 
 }
@@ -368,36 +464,29 @@ body {
 
         <div class="stat">
             <strong>165</strong>
-
             <span>
                 <span class="stat-icon">🎬</span>
                 Videos
             </span>
         </div>
 
-
         <div class="stat">
             <strong>340</strong>
-
             <span>
                 <span class="stat-icon">🖼️</span>
                 Pictures
             </span>
         </div>
 
-
         <div class="stat">
             <strong>18+</strong>
-
-            <span>
-                Content
-            </span>
+            <span>Content</span>
         </div>
 
     </div>
 
 
-    <!-- AFFILIATE BANNER -->
+    <!-- BANNER -->
 
     <div class="ad-box">
 
@@ -430,7 +519,6 @@ body {
 
         </button>
 
-
         <button
             class="live"
             onclick="openPopup()">
@@ -450,7 +538,6 @@ body {
             Featured Content
         </div>
 
-
         <div class="slider">
 
             <img
@@ -466,7 +553,6 @@ body {
                 ‹
 
             </button>
-
 
             <button
                 class="slider-arrow next"
@@ -498,7 +584,9 @@ body {
 </div>
 
 
-<!-- 18+ POPUP -->
+<!-- =================================
+     POPUP
+================================= -->
 
 <div
     class="overlay"
@@ -506,8 +594,10 @@ body {
 
     <div class="popup">
 
+        <!-- X -->
+
         <button
-            class="close"
+            class="popup-close"
             onclick="closePopup()">
 
             ×
@@ -515,21 +605,82 @@ body {
         </button>
 
 
-        <h2>
-            18+ Content
-        </h2>
+        <!-- GREEN TITLE -->
+
+        <div class="popup-title">
+            Izaho29
+        </div>
 
 
-        <p>
-            This page contains age-restricted content.
-            Please confirm that you are 18 years or older
-            to continue.
-        </p>
+        <div class="popup-description">
+            Continue to the available content by following
+            the simple steps below.
+        </div>
 
+
+        <!-- 3 STEPS -->
+
+        <div class="steps">
+
+            <div class="step">
+
+                <div class="step-number">
+                    1
+                </div>
+
+                <div>
+                    Create a free account to continue.
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    2
+                </div>
+
+                <div>
+                    Complete the available membership step.
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    3
+                </div>
+
+                <div>
+                    Continue to explore the available content.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BANNER -->
+
+        <div class="popup-banner">
+
+            <span>
+                Continue
+            </span>
+
+        </div>
+
+
+        <!-- BLACK BUTTON -->
 
         <button
-            class="popup-button"
+            class="popup-continue"
             onclick="closePopup()">
+
+            <span class="lock-icon">🔒</span>
 
             Continue
 
@@ -546,25 +697,25 @@ body {
    POPUP
 ========================= */
 
-function openPopup() {
+function openPopup(){
 
     document.getElementById("popup").style.display = "flex";
 
 }
 
 
-function closePopup() {
+function closePopup(){
 
     document.getElementById("popup").style.display = "none";
 
 }
 
 
-/* Close popup by clicking outside */
+/* Click outside popup */
 
-document.getElementById("popup").addEventListener("click", function(event) {
+document.getElementById("popup").addEventListener("click", function(event){
 
-    if (event.target === this) {
+    if(event.target === this){
 
         closePopup();
 
@@ -586,30 +737,24 @@ const slides = [
 
 ];
 
-
 let currentSlide = 0;
 
 
-function showSlide(index) {
+function showSlide(index){
 
-    if (index >= slides.length) {
+    if(index >= slides.length){
 
         currentSlide = 0;
 
-    }
-
-    else if (index < 0) {
+    }else if(index < 0){
 
         currentSlide = slides.length - 1;
 
-    }
-
-    else {
+    }else{
 
         currentSlide = index;
 
     }
-
 
     document.getElementById("slideImage").src =
         slides[currentSlide];
@@ -617,27 +762,27 @@ function showSlide(index) {
 }
 
 
-function nextSlide() {
+function nextSlide(){
 
     showSlide(currentSlide + 1);
 
 }
 
 
-function prevSlide() {
+function prevSlide(){
 
     showSlide(currentSlide - 1);
 
 }
 
 
-/* Auto scroll every 3 seconds */
+/* Auto slide */
 
-setInterval(function() {
+setInterval(function(){
 
     nextSlide();
 
-}, 3000);
+},3000);
 
 </script>
 
