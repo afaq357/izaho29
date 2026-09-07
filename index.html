@@ -1,314 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Izaho29</title>
+<title>Izaho29</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<style>
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            color: #222;
-        }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        .page {
-            width: 100%;
-            max-width: 720px;
-            margin: auto;
-            background: white;
-            min-height: 100vh;
-        }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+}
 
-        /* Header */
-        .profile {
-            text-align: center;
-            padding: 30px 20px 20px;
-        }
+.container {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    background: #fff;
+    min-height: 100vh;
+    box-shadow: 0 0 20px rgba(0,0,0,0.08);
+}
 
-        .profile-img {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            object-fit: cover;
-            background: #ddd;
-            display: block;
-            margin: 0 auto 12px;
-        }
+/* PROFILE */
 
-        .name {
-            font-size: 25px;
-            font-weight: 700;
-        }
+.profile {
+    text-align: center;
+    padding: 28px 20px 18px;
+}
 
-        .verified {
-            color: #1877f2;
-            font-size: 18px;
-        }
+.profile-image {
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.18);
+}
 
-        .location {
-            color: #777;
-            margin-top: 5px;
-        }
+.name {
+    margin-top: 12px;
+    font-size: 24px;
+    font-weight: 700;
+}
 
-        /* Rating */
-        .rating {
-            margin-top: 12px;
-            font-size: 18px;
-        }
+.verified {
+    color: #1877f2;
+    font-size: 17px;
+}
 
-        .stars {
-            color: #f5b400;
-            letter-spacing: 2px;
-        }
+.location {
+    margin-top: 6px;
+    color: #777;
+    font-size: 14px;
+}
 
-        /* Stats */
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 35px;
-            margin: 18px 0;
-        }
+.rating {
+    margin-top: 7px;
+    font-size: 14px;
+    color: #555;
+}
 
-        .stat {
-            text-align: center;
-            min-width: 80px;
-        }
+/* STATS */
 
-        .stat strong {
-            display: block;
-            font-size: 20px;
-            font-weight: 700;
-        }
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 15px 10px 20px;
+    border-bottom: 1px solid #eee;
+}
 
-        .stat span {
-            color: #777;
-            font-size: 13px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 4px;
-        }
+.stat {
+    text-align: center;
+    min-width: 80px;
+}
 
-        .stat-icon {
-            font-size: 12px;
-            line-height: 1;
-        }
+.stat strong {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+}
 
-        /* Ad */
-        .ad-box {
-            margin: 10px 20px 20px;
-            min-height: 110px;
-            border-radius: 12px;
-            background: #eeeeee;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
+.stat span {
+    color: #777;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
 
-        .ad-box a {
-            display: block;
-            line-height: 0;
-        }
+.stat-icon {
+    font-size: 12px;
+    line-height: 1;
+}
 
-        .ad-box img {
-            display: block;
-            width: 305px;
-            height: 99px;
-            max-width: 100%;
-            object-fit: contain;
-        }
+/* AD */
 
-        /* Buttons */
-        .buttons {
-            display: flex;
-            gap: 10px;
-            padding: 0 20px 20px;
-        }
+.ad-box {
+    margin: 10px 20px 20px;
+    min-height: 110px;
+    border-radius: 12px;
+    background: #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
 
-        .buttons button {
-            flex: 1;
-            border: none;
-            border-radius: 9px;
-            padding: 13px 10px;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-        }
+.ad-box a {
+    display: block;
+    line-height: 0;
+}
 
-        .explicit {
-            background: #222;
-            color: white;
-        }
+.ad-box img {
+    display: block;
+    width: 305px;
+    height: 99px;
+    max-width: 100%;
+    object-fit: contain;
+}
 
-        .live {
-            background: #e91e63;
-            color: white;
-        }
+/* BUTTONS */
 
-        /* Main content */
-        .content {
-            padding: 0 20px 30px;
-        }
+.buttons {
+    display: flex;
+    gap: 10px;
+    padding: 0 20px;
+}
 
-        .content-title {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
+.buttons button {
+    flex: 1;
+    border: none;
+    padding: 13px 8px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
 
-        /* Slider */
-        .slider {
-            position: relative;
-            width: 100%;
-            height: 380px;
-            overflow: hidden;
-            border-radius: 14px;
-            background: #ddd;
-        }
+.explicit {
+    background: #222;
+    color: #fff;
+}
 
-        .slide {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
+.live {
+    background: #e53935;
+    color: #fff;
+}
 
-        .arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 42px;
-            height: 42px;
-            border: none;
-            border-radius: 50%;
-            background: rgba(0,0,0,.55);
-            color: white;
-            font-size: 25px;
-            cursor: pointer;
-            z-index: 2;
-        }
+/* FEATURED */
 
-        .prev {
-            left: 12px;
-        }
+.featured {
+    padding: 25px 20px 10px;
+}
 
-        .next {
-            right: 12px;
-        }
+.featured-title {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
 
-        .join-button {
-            display: block;
-            width: 100%;
-            margin-top: 15px;
-            padding: 15px;
-            border: none;
-            border-radius: 10px;
-            background: #e91e63;
-            color: white;
-            font-size: 17px;
-            font-weight: bold;
-            cursor: pointer;
-        }
+.slider {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #eee;
+}
 
-        /* Popup */
-        .overlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,.72);
-            z-index: 999;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
+.slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 
-        .popup {
-            position: relative;
-            width: 100%;
-            max-width: 420px;
-            background: white;
-            border-radius: 16px;
-            padding: 25px;
-            text-align: center;
-        }
+/* SLIDER ARROWS */
 
-        .close {
-            position: absolute;
-            top: 8px;
-            right: 12px;
-            border: none;
-            background: none;
-            font-size: 30px;
-            cursor: pointer;
-        }
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.55);
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 5;
+}
 
-        .popup h2 {
-            margin-bottom: 10px;
-        }
+.prev {
+    left: 10px;
+}
 
-        .popup p {
-            color: #666;
-            line-height: 1.5;
-            margin-bottom: 18px;
-        }
+.next {
+    right: 10px;
+}
 
-        .popup-button {
-            display: block;
-            width: 100%;
-            padding: 14px;
-            border-radius: 9px;
-            background: #e91e63;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
+/* VIEW MORE */
 
-        @media (max-width: 500px) {
+.view-more {
+    padding: 18px 20px 30px;
+}
 
-            .slider {
-                height: 320px;
-            }
+.join-button {
+    width: 100%;
+    border: none;
+    background: #111;
+    color: #fff;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
 
-            .stats {
-                gap: 22px;
-            }
+/* POPUP OVERLAY */
 
-            .stat {
-                min-width: 70px;
-            }
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.72);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
 
-            .buttons button {
-                font-size: 12px;
-            }
+/* POPUP */
 
-            .ad-box {
-                margin-left: 20px;
-                margin-right: 20px;
-            }
-        }
-    </style>
+.popup {
+    position: relative;
+    width: 100%;
+    max-width: 390px;
+    background: #fff;
+    border-radius: 18px;
+    padding: 30px 22px 24px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+    animation: popupIn 0.2s ease-out;
+}
+
+@keyframes popupIn {
+    from {
+        transform: scale(0.92);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.popup h2 {
+    margin: 0 0 12px;
+    font-size: 24px;
+}
+
+.popup p {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 22px;
+    font-size: 15px;
+}
+
+/* CLOSE BUTTON */
+
+.close {
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    width: 34px;
+    height: 34px;
+    border: 0;
+    border-radius: 50%;
+    background: #eee;
+    color: #333;
+    font-size: 25px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+/* POPUP BUTTON */
+
+.popup-button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 25px;
+    background: #111;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* MOBILE */
+
+@media (max-width: 420px) {
+
+    .stats {
+        gap: 18px;
+    }
+
+    .slider {
+        height: 270px;
+    }
+
+    .buttons button {
+        font-size: 13px;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
 
-<div class="page">
+<div class="container">
 
-    <!-- Profile -->
-    <section class="profile">
+    <!-- PROFILE -->
+
+    <div class="profile">
 
         <img
-            class="profile-img"
+            class="profile-image"
             src="iamge/profile.webp"
-            alt="Profile">
+            alt="Izaho29">
 
         <div class="name">
             Izaho29 <span class="verified">✓</span>
@@ -319,41 +356,49 @@
         </div>
 
         <div class="rating">
-            <span class="stars">★★★★★</span>
-            <span> 5.0</span>
+            ⭐ 4.9
         </div>
 
-        <!-- Stats -->
-        <div class="stats">
+    </div>
 
-            <div class="stat">
-                <strong>165</strong>
-                <span>
-                    <span class="stat-icon">🎬</span>
-                    Videos
-                </span>
-            </div>
 
-            <div class="stat">
-                <strong>340</strong>
-                <span>
-                    <span class="stat-icon">🖼️</span>
-                    Pictures
-                </span>
-            </div>
+    <!-- STATS -->
 
-            <div class="stat">
-                <strong>18+</strong>
-                <span>
-                    Content
-                </span>
-            </div>
+    <div class="stats">
 
+        <div class="stat">
+            <strong>165</strong>
+
+            <span>
+                <span class="stat-icon">🎬</span>
+                Videos
+            </span>
         </div>
 
-    </section>
 
-    <!-- CrakRevenue Affiliate Banner -->
+        <div class="stat">
+            <strong>340</strong>
+
+            <span>
+                <span class="stat-icon">🖼️</span>
+                Pictures
+            </span>
+        </div>
+
+
+        <div class="stat">
+            <strong>18+</strong>
+
+            <span>
+                Content
+            </span>
+        </div>
+
+    </div>
+
+
+    <!-- AFFILIATE BANNER -->
+
     <div class="ad-box">
 
         <a
@@ -366,143 +411,233 @@
                 width="305"
                 height="99"
                 border="0"
-                alt="Affiliate Ad">
+                alt="Advertisement">
 
         </a>
 
     </div>
 
-    <!-- Affiliate Buttons -->
+
+    <!-- MAIN BUTTONS -->
+
     <div class="buttons">
 
         <button
             class="explicit"
-            onclick="window.location.href='https://t.ajrkmx3.com/421332/8780/32504?aff_sub=Page1&source=Facebook&aff_sub5=SF_006OG000004lmDN'">
+            onclick="openPopup()">
+
             🔞 Explicit Content
+
         </button>
+
 
         <button
             class="live"
-            onclick="window.location.href='https://t.ajrkmx3.com/421332/8780/32504?aff_sub=Page1&source=Facebook&aff_sub5=SF_006OG000004lmDN'">
+            onclick="openPopup()">
+
             🔴 +18 Livestream
+
         </button>
 
     </div>
 
-    <!-- Featured Content -->
-    <section class="content">
 
-        <div class="content-title">
+    <!-- FEATURED -->
+
+    <div class="featured">
+
+        <div class="featured-title">
             Featured Content
         </div>
+
 
         <div class="slider">
 
             <img
                 id="slideImage"
-                class="slide"
+                class="slide-image"
                 src="iamge/images.jpg"
                 alt="Featured">
 
             <button
-                class="arrow prev"
-                onclick="previousSlide()">‹</button>
+                class="slider-arrow prev"
+                onclick="prevSlide()">
+
+                ‹
+
+            </button>
+
 
             <button
-                class="arrow next"
-                onclick="nextSlide()">›</button>
+                class="slider-arrow next"
+                onclick="nextSlide()">
+
+                ›
+
+            </button>
 
         </div>
 
-        <!-- View More -->
+    </div>
+
+
+    <!-- VIEW MORE -->
+
+    <div class="view-more">
+
         <button
             class="join-button"
-            onclick="window.location.href='https://t.ajrkmx3.com/421332/8780/32504?aff_sub=Page1&source=Facebook&aff_sub5=SF_006OG000004lmDN'">
+            onclick="openPopup()">
+
             View More
+
         </button>
-
-    </section>
-
-</div>
-
-<!-- Popup -->
-<div class="overlay" id="popup">
-
-    <div class="popup">
-
-        <button
-            class="close"
-            onclick="closePopup()">×</button>
-
-        <h2>18+ Content</h2>
-
-        <p>
-            Continue to the available offer and explore more content.
-        </p>
-
-        <a
-            class="popup-button"
-            href="https://t.ajrkmx3.com/421332/8780/32504?aff_sub=Page1&source=Facebook&aff_sub5=SF_006OG000004lmDN">
-            Join for Free
-        </a>
 
     </div>
 
 </div>
 
+
+<!-- 18+ POPUP -->
+
+<div
+    class="overlay"
+    id="popup">
+
+    <div class="popup">
+
+        <button
+            class="close"
+            onclick="closePopup()">
+
+            ×
+
+        </button>
+
+
+        <h2>
+            18+ Content
+        </h2>
+
+
+        <p>
+            This page contains age-restricted content.
+            Please confirm that you are 18 years or older
+            to continue.
+        </p>
+
+
+        <button
+            class="popup-button"
+            onclick="closePopup()">
+
+            Continue
+
+        </button>
+
+    </div>
+
+</div>
+
+
 <script>
 
-    /* Slider Images */
-    const slides = [
-        "iamge/images.jpg",
-        "iamge/images (1).jpg",
-        "iamge/images (2).jpg",
-        "iamge/images (3).jpg"
-    ];
+/* =========================
+   POPUP
+========================= */
 
-    let currentSlide = 0;
+function openPopup() {
 
-    /* Show Slide */
-    function showSlide() {
-        document.getElementById("slideImage").src =
-            slides[currentSlide];
+    document.getElementById("popup").style.display = "flex";
+
+}
+
+
+function closePopup() {
+
+    document.getElementById("popup").style.display = "none";
+
+}
+
+
+/* Close popup by clicking outside */
+
+document.getElementById("popup").addEventListener("click", function(event) {
+
+    if (event.target === this) {
+
+        closePopup();
+
     }
 
-    /* Next Slide */
-    function nextSlide() {
-        currentSlide++;
+});
 
-        if (currentSlide >= slides.length) {
-            currentSlide = 0;
-        }
 
-        showSlide();
+/* =========================
+   SLIDER
+========================= */
+
+const slides = [
+
+    "iamge/images.jpg",
+    "iamge/images (1).jpg",
+    "iamge/images (2).jpg",
+    "iamge/images (3).jpg"
+
+];
+
+
+let currentSlide = 0;
+
+
+function showSlide(index) {
+
+    if (index >= slides.length) {
+
+        currentSlide = 0;
+
     }
 
-    /* Previous Slide */
-    function previousSlide() {
-        currentSlide--;
+    else if (index < 0) {
 
-        if (currentSlide < 0) {
-            currentSlide = slides.length - 1;
-        }
+        currentSlide = slides.length - 1;
 
-        showSlide();
     }
 
-    /* Auto Slider - Every 3 Seconds */
-    setInterval(function() {
-        nextSlide();
-    }, 3000);
+    else {
 
-    /* Popup */
-    function openPopup() {
-        document.getElementById("popup").style.display = "flex";
+        currentSlide = index;
+
     }
 
-    function closePopup() {
-        document.getElementById("popup").style.display = "none";
-    }
+
+    document.getElementById("slideImage").src =
+        slides[currentSlide];
+
+}
+
+
+function nextSlide() {
+
+    showSlide(currentSlide + 1);
+
+}
+
+
+function prevSlide() {
+
+    showSlide(currentSlide - 1);
+
+}
+
+
+/* Auto scroll every 3 seconds */
+
+setInterval(function() {
+
+    nextSlide();
+
+}, 3000);
 
 </script>
 
