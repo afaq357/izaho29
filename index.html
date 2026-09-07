@@ -38,12 +38,21 @@ body {
    PROFILE
 ========================= */
 
-.profile {
-    text-align: center;
+profile {
+    display: grid;
+    grid-template-columns: 105px 1fr;
+    grid-template-rows: auto auto auto;
+    column-gap: 16px;
+    align-items: center;
+    text-align: left;
     padding: 28px 20px 18px;
+    max-width: 380px;
+    margin: 0 auto;
 }
 
+
 .profile-image {
+    grid-row: 1 / 4;
     width: 105px;
     height: 105px;
     border-radius: 50%;
