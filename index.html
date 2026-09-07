@@ -79,16 +79,27 @@
 
         .stat {
             text-align: center;
+            min-width: 80px;
         }
 
         .stat strong {
             display: block;
             font-size: 20px;
+            font-weight: 700;
         }
 
         .stat span {
             color: #777;
             font-size: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        .stat-icon {
+            font-size: 12px;
+            line-height: 1;
         }
 
         /* Ad */
@@ -262,12 +273,17 @@
         }
 
         @media (max-width: 500px) {
+
             .slider {
                 height: 320px;
             }
 
             .stats {
                 gap: 22px;
+            }
+
+            .stat {
+                min-width: 70px;
             }
 
             .buttons button {
@@ -286,6 +302,7 @@
 
 <div class="page">
 
+    <!-- Profile -->
     <section class="profile">
 
         <img
@@ -306,27 +323,39 @@
             <span> 5.0</span>
         </div>
 
+        <!-- Stats -->
         <div class="stats">
+
             <div class="stat">
-                <strong>24</strong>
-                <span>Videos</span>
+                <strong>165</strong>
+                <span>
+                    <span class="stat-icon">🎬</span>
+                    Videos
+                </span>
             </div>
 
             <div class="stat">
-                <strong>86</strong>
-                <span>Photos</span>
+                <strong>340</strong>
+                <span>
+                    <span class="stat-icon">🖼️</span>
+                    Pictures
+                </span>
             </div>
 
             <div class="stat">
                 <strong>18+</strong>
-                <span>Content</span>
+                <span>
+                    Content
+                </span>
             </div>
+
         </div>
 
     </section>
 
     <!-- CrakRevenue Affiliate Banner -->
     <div class="ad-box">
+
         <a
             href="https://t.ajrkmx3.com/421332/8780/32504?aff_sub=Page1&source=Facebook&file_id=610753&aff_sub5=SF_006OG000004lmDN&aff_sub4=AT_0002"
             target="_blank"
@@ -340,6 +369,7 @@
                 alt="Affiliate Ad">
 
         </a>
+
     </div>
 
     <!-- Affiliate Buttons -->
@@ -359,6 +389,7 @@
 
     </div>
 
+    <!-- Featured Content -->
     <section class="content">
 
         <div class="content-title">
@@ -383,6 +414,7 @@
 
         </div>
 
+        <!-- View More -->
         <button
             class="join-button"
             onclick="window.location.href='https://t.ajrkmx3.com/421332/8780/32504?aff_sub=Page1&source=Facebook&aff_sub5=SF_006OG000004lmDN'">
@@ -430,6 +462,7 @@
 
     let currentSlide = 0;
 
+    /* Show Slide */
     function showSlide() {
         document.getElementById("slideImage").src =
             slides[currentSlide];
@@ -457,12 +490,12 @@
         showSlide();
     }
 
-    /* AUTO SLIDER - Every 3 Seconds */
+    /* Auto Slider - Every 3 Seconds */
     setInterval(function() {
         nextSlide();
     }, 3000);
 
-    /* Popup Functions */
+    /* Popup */
     function openPopup() {
         document.getElementById("popup").style.display = "flex";
     }
