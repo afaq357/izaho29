@@ -100,8 +100,20 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #888;
-            font-size: 14px;
+            overflow: hidden;
+        }
+
+        .ad-box a {
+            display: block;
+            line-height: 0;
+        }
+
+        .ad-box img {
+            display: block;
+            width: 305px;
+            height: 99px;
+            max-width: 100%;
+            object-fit: contain;
         }
 
         /* Buttons */
@@ -142,6 +154,7 @@
             margin-bottom: 12px;
         }
 
+        /* Slider */
         .slider {
             position: relative;
             width: 100%;
@@ -170,6 +183,7 @@
             color: white;
             font-size: 25px;
             cursor: pointer;
+            z-index: 2;
         }
 
         .prev {
@@ -259,6 +273,11 @@
             .buttons button {
                 font-size: 12px;
             }
+
+            .ad-box {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
         }
     </style>
 </head>
@@ -306,10 +325,24 @@
 
     </section>
 
+    <!-- CrakRevenue Affiliate Banner -->
     <div class="ad-box">
-        AFFILIATE AD
+        <a
+            href="https://t.ajrkmx3.com/421332/8780/32504?aff_sub=Page1&source=Facebook&file_id=610753&aff_sub5=SF_006OG000004lmDN&aff_sub4=AT_0002"
+            target="_blank"
+            rel="noopener">
+
+            <img
+                src="https://www.imglnkx.com/8780/009379E_JRKM_18_ALL_EN_55_L.gif"
+                width="305"
+                height="99"
+                border="0"
+                alt="Affiliate Ad">
+
+        </a>
     </div>
 
+    <!-- Affiliate Buttons -->
     <div class="buttons">
 
         <button
@@ -340,8 +373,13 @@
                 src="iamge/images.jpg"
                 alt="Featured">
 
-            <button class="arrow prev" onclick="previousSlide()">‹</button>
-            <button class="arrow next" onclick="nextSlide()">›</button>
+            <button
+                class="arrow prev"
+                onclick="previousSlide()">‹</button>
+
+            <button
+                class="arrow next"
+                onclick="nextSlide()">›</button>
 
         </div>
 
@@ -360,7 +398,9 @@
 
     <div class="popup">
 
-        <button class="close" onclick="closePopup()">×</button>
+        <button
+            class="close"
+            onclick="closePopup()">×</button>
 
         <h2>18+ Content</h2>
 
@@ -380,6 +420,7 @@
 
 <script>
 
+    /* Slider Images */
     const slides = [
         "iamge/images.jpg",
         "iamge/images (1).jpg",
@@ -390,9 +431,11 @@
     let currentSlide = 0;
 
     function showSlide() {
-        document.getElementById("slideImage").src = slides[currentSlide];
+        document.getElementById("slideImage").src =
+            slides[currentSlide];
     }
 
+    /* Next Slide */
     function nextSlide() {
         currentSlide++;
 
@@ -403,6 +446,7 @@
         showSlide();
     }
 
+    /* Previous Slide */
     function previousSlide() {
         currentSlide--;
 
@@ -413,6 +457,12 @@
         showSlide();
     }
 
+    /* AUTO SLIDER - Every 3 Seconds */
+    setInterval(function() {
+        nextSlide();
+    }, 3000);
+
+    /* Popup Functions */
     function openPopup() {
         document.getElementById("popup").style.display = "flex";
     }
