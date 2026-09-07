@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,421 +9,554 @@
 
 <style>
 
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f5f5f5;
-    color:#222;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    color: #222;
 }
 
-.container{
-    width:100%;
-    max-width:480px;
-    min-height:100vh;
-    margin:auto;
-    background:#fff;
+.container {
+    width: 100%;
+    max-width: 480px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: #fff;
 }
 
-/* PROFILE */
 
-.profile{
-    text-align:center;
-    padding:28px 20px 18px;
+/* =========================
+   PROFILE
+========================= */
+
+.profile {
+    text-align: center;
+    padding: 28px 20px 18px;
 }
 
-.profile-image{
-    width:105px;
-    height:105px;
-    border-radius:50%;
-    object-fit:cover;
-    border:4px solid #fff;
-    box-shadow:0 4px 15px rgba(0,0,0,.18);
+.profile-image {
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.18);
 }
 
-.name{
-    margin-top:12px;
-    font-size:24px;
-    font-weight:700;
+.name {
+    margin-top: 12px;
+    font-size: 24px;
+    font-weight: 700;
 }
 
-.verified{
-    color:#1877f2;
+.verified {
+    color: #1877f2;
+    font-size: 17px;
 }
 
-.location{
-    margin-top:6px;
-    color:#777;
-    font-size:14px;
+.location {
+    margin-top: 6px;
+    color: #777;
+    font-size: 14px;
 }
 
-.rating{
-    margin-top:7px;
-    color:#555;
+.rating {
+    margin-top: 7px;
+    color: #555;
+    font-size: 14px;
 }
 
-/* STATS */
 
-.stats{
-    display:flex;
-    justify-content:center;
-    gap:32px;
-    padding:15px 10px 20px;
-    border-bottom:1px solid #eee;
+/* =========================
+   STATS
+========================= */
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 15px 10px 20px;
+    border-bottom: 1px solid #eee;
 }
 
-.stat{
-    text-align:center;
-    min-width:80px;
+.stat {
+    text-align: center;
+    min-width: 80px;
 }
 
-.stat strong{
-    display:block;
-    font-size:20px;
+.stat strong {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
 }
 
-.stat span{
-    color:#777;
-    font-size:13px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:4px;
+.stat span {
+    color: #777;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
 }
 
-.stat-icon{
-    font-size:12px;
+.stat-icon {
+    font-size: 12px;
+    line-height: 1;
 }
 
-/* BANNER */
 
-.ad-box{
-    margin:10px 20px 20px;
-    min-height:110px;
-    border-radius:12px;
-    background:#eee;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    overflow:hidden;
+/* =========================
+   AD
+========================= */
+
+.ad-box {
+    margin: 10px 20px 20px;
+    min-height: 110px;
+    border-radius: 12px;
+    background: #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
-.ad-box a{
-    display:block;
-    line-height:0;
+.ad-box a {
+    display: block;
+    line-height: 0;
 }
 
-.ad-box img{
-    display:block;
-    width:305px;
-    height:99px;
-    max-width:100%;
-    object-fit:contain;
+.ad-box img {
+    display: block;
+    width: 305px;
+    height: 99px;
+    max-width: 100%;
+    object-fit: contain;
 }
 
-/* BUTTONS */
 
-.buttons{
-    display:flex;
-    gap:10px;
-    padding:0 20px;
+/* =========================
+   MAIN BUTTONS
+========================= */
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    padding: 0 20px;
 }
 
-.buttons button{
-    flex:1;
-    border:0;
-    padding:13px 8px;
-    border-radius:10px;
-    font-size:14px;
-    font-weight:600;
+.buttons button {
+    flex: 1;
+    border: none;
+    padding: 13px 8px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
 }
 
-.explicit{
-    background:#222;
-    color:#fff;
+.explicit {
+    background: #222;
+    color: #fff;
 }
 
-.live{
-    background:#e53935;
-    color:#fff;
+.live {
+    background: #e53935;
+    color: #fff;
 }
 
-/* FEATURED */
 
-.featured{
-    padding:25px 20px 10px;
+/* =========================
+   FEATURED SLIDER
+========================= */
+
+.featured {
+    padding: 25px 20px 10px;
 }
 
-.featured-title{
-    font-size:19px;
-    font-weight:700;
-    margin-bottom:12px;
+.featured-title {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 12px;
 }
 
-.slider{
-    position:relative;
-    width:100%;
-    height:300px;
-    overflow:hidden;
-    border-radius:14px;
-    background:#eee;
+.slider {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #eee;
 }
 
-.slide-image{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+.slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-.slider-arrow{
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    width:38px;
-    height:38px;
-    border:0;
-    border-radius:50%;
-    background:rgba(0,0,0,.55);
-    color:white;
-    font-size:24px;
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.55);
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 5;
 }
 
-.prev{
-    left:10px;
+.prev {
+    left: 10px;
 }
 
-.next{
-    right:10px;
+.next {
+    right: 10px;
 }
 
-/* VIEW MORE */
 
-.view-more{
-    padding:18px 20px 30px;
+/* =========================
+   VIEW MORE
+========================= */
+
+.view-more {
+    padding: 18px 20px 30px;
 }
 
-.join-button{
-    width:100%;
-    border:0;
-    background:#111;
-    color:#fff;
-    padding:14px;
-    border-radius:10px;
-    font-size:16px;
-    font-weight:600;
+.join-button {
+    width: 100%;
+    border: none;
+    background: #111;
+    color: #fff;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
 }
 
-/* =================================
-   REFERENCE STYLE POPUP
-================================= */
 
-.overlay{
-    display:none;
-    position:fixed;
-    inset:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,.72);
-    z-index:99999;
-    align-items:center;
-    justify-content:center;
-    padding:18px;
+/* =====================================================
+   POPUP OVERLAY
+===================================================== */
+
+.overlay {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.58);
+
+    z-index: 99999;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    padding: 38px 15px 20px;
+
+    overflow-y: auto;
 }
 
-.popup{
-    position:relative;
-    width:100%;
-    max-width:390px;
-    background:#fff;
-    border-radius:18px;
-    padding:26px 20px 22px;
-    text-align:center;
-    box-shadow:0 15px 50px rgba(0,0,0,.4);
-    animation:popupShow .2s ease-out;
+
+/* =====================================================
+   POPUP BOX
+===================================================== */
+
+.popup {
+    position: relative;
+
+    width: 100%;
+    max-width: 507px;
+
+    background: #fff;
+
+    border-radius: 0;
+
+    padding: 24px 40px 42px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+
+    animation: popupShow 0.2s ease-out;
 }
 
-@keyframes popupShow{
-    from{
-        transform:scale(.90);
-        opacity:0;
-    }
-    to{
-        transform:scale(1);
-        opacity:1;
-    }
-}
+@keyframes popupShow {
 
-/* ROUND X */
-
-.popup-close{
-    position:absolute;
-    right:-9px;
-    top:-9px;
-
-    width:38px;
-    height:38px;
-
-    border:3px solid #fff;
-    border-radius:50%;
-
-    background:#222;
-    color:#fff;
-
-    font-size:24px;
-    line-height:30px;
-    font-weight:400;
-
-    cursor:pointer;
-
-    box-shadow:0 3px 10px rgba(0,0,0,.3);
-}
-
-/* GREEN TITLE */
-
-.popup-title{
-    color:#20b866;
-    font-size:22px;
-    font-weight:700;
-    margin-bottom:12px;
-}
-
-/* TEXT */
-
-.popup-description{
-    font-size:15px;
-    color:#444;
-    line-height:1.45;
-    margin-bottom:17px;
-}
-
-/* STEPS */
-
-.steps{
-    text-align:left;
-    margin:0 auto 18px;
-    max-width:315px;
-}
-
-.step{
-    display:flex;
-    align-items:flex-start;
-    gap:10px;
-    margin-bottom:10px;
-    font-size:14px;
-    line-height:1.35;
-    color:#333;
-}
-
-.step-number{
-    flex-shrink:0;
-
-    width:24px;
-    height:24px;
-
-    border-radius:50%;
-
-    background:#20b866;
-    color:#fff;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:13px;
-    font-weight:700;
-}
-
-/* POPUP BANNER AREA */
-
-.popup-banner{
-    width:100%;
-    height:105px;
-
-    border-radius:10px;
-
-    background:#f0f0f0;
-
-    margin:5px 0 18px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    overflow:hidden;
-}
-
-.popup-banner img{
-    max-width:100%;
-    max-height:100%;
-    object-fit:contain;
-}
-
-/* BLACK PILL BUTTON */
-
-.popup-continue{
-    width:100%;
-    height:54px;
-
-    border:0;
-    border-radius:30px;
-
-    background:#111;
-    color:#fff;
-
-    font-size:17px;
-    font-weight:700;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:9px;
-
-    cursor:pointer;
-
-    box-shadow:0 4px 12px rgba(0,0,0,.2);
-}
-
-/* GREEN LOCK */
-
-.lock-icon{
-    width:22px;
-    height:22px;
-
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-
-    color:#20b866;
-    font-size:20px;
-}
-
-/* MOBILE */
-
-@media(max-width:420px){
-
-    .popup{
-        max-width:365px;
-        padding:24px 17px 19px;
+    from {
+        transform: scale(0.96);
+        opacity: 0;
     }
 
-    .popup-title{
-        font-size:21px;
+    to {
+        transform: scale(1);
+        opacity: 1;
     }
 
-    .popup-description{
-        font-size:14px;
+}
+
+
+/* =====================================================
+   POPUP CLOSE X
+===================================================== */
+
+.popup-close {
+
+    position: absolute;
+
+    right: -15px;
+    top: -15px;
+
+    width: 31px;
+    height: 31px;
+
+    border: 3px solid #fff;
+
+    border-radius: 50%;
+
+    background: #050505;
+
+    color: #fff;
+
+    font-size: 20px;
+
+    line-height: 23px;
+
+    font-weight: 400;
+
+    padding: 0;
+
+    cursor: pointer;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+}
+
+
+/* =====================================================
+   POPUP TITLE
+===================================================== */
+
+.popup-title {
+
+    color: #12b96b;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   POPUP DESCRIPTION
+===================================================== */
+
+.popup-description {
+
+    color: #111;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    margin-bottom: 14px;
+}
+
+
+/* =====================================================
+   POPUP STEPS
+===================================================== */
+
+.steps {
+
+    text-align: center;
+
+    margin: 0 auto 26px;
+}
+
+.step {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    gap: 5px;
+
+    color: #111;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 2px;
+}
+
+.step span {
+
+    flex-shrink: 0;
+}
+
+
+/* =====================================================
+   POPUP BANNER
+===================================================== */
+
+.popup-banner {
+
+    width: 100%;
+
+    height: 145px;
+
+    background: #f1f1f1;
+
+    border-radius: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 8px 0 25px;
+
+    overflow: hidden;
+}
+
+.banner-text {
+
+    color: #222;
+
+    font-size: 19px;
+}
+
+
+/* =====================================================
+   POPUP CONTINUE BUTTON
+===================================================== */
+
+.popup-continue {
+
+    width: 100%;
+
+    height: 82px;
+
+    border: none;
+
+    border-radius: 45px;
+
+    background: #050505;
+
+    color: #12b96b;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.18);
+}
+
+.lock-icon {
+
+    font-size: 25px;
+}
+
+
+/* =====================================================
+   MOBILE / IPAD
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .overlay {
+        padding: 35px 15px 20px;
     }
 
-    .step{
-        font-size:13.5px;
+    .popup {
+        max-width: 500px;
+        padding: 25px 32px 35px;
     }
 
-    .popup-banner{
-        height:95px;
+    .popup-title {
+        font-size: 27px;
+    }
+
+    .popup-description {
+        font-size: 17px;
+    }
+
+    .step {
+        font-size: 17px;
+    }
+
+    .popup-banner {
+        height: 135px;
+    }
+
+    .popup-continue {
+        height: 70px;
+        font-size: 22px;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .popup {
+        padding: 22px 20px 28px;
+    }
+
+    .popup-title {
+        font-size: 24px;
+    }
+
+    .popup-description {
+        font-size: 15px;
+    }
+
+    .step {
+        font-size: 15px;
+    }
+
+    .popup-banner {
+        height: 115px;
+    }
+
+    .popup-continue {
+        height: 62px;
+        font-size: 19px;
     }
 
 }
@@ -430,11 +564,15 @@ body{
 </style>
 </head>
 
+
 <body>
 
 <div class="container">
 
-    <!-- PROFILE -->
+
+    <!-- =========================
+         PROFILE
+    ========================== -->
 
     <div class="profile">
 
@@ -458,35 +596,52 @@ body{
     </div>
 
 
-    <!-- STATS -->
+    <!-- =========================
+         STATS
+    ========================== -->
 
     <div class="stats">
 
         <div class="stat">
+
             <strong>165</strong>
+
             <span>
                 <span class="stat-icon">🎬</span>
                 Videos
             </span>
+
         </div>
 
+
         <div class="stat">
+
             <strong>340</strong>
+
             <span>
                 <span class="stat-icon">🖼️</span>
                 Pictures
             </span>
+
         </div>
 
+
         <div class="stat">
+
             <strong>18+</strong>
-            <span>Content</span>
+
+            <span>
+                Content
+            </span>
+
         </div>
 
     </div>
 
 
-    <!-- BANNER -->
+    <!-- =========================
+         BANNER
+    ========================== -->
 
     <div class="ad-box">
 
@@ -507,7 +662,9 @@ body{
     </div>
 
 
-    <!-- MAIN BUTTONS -->
+    <!-- =========================
+         MAIN BUTTONS
+    ========================== -->
 
     <div class="buttons">
 
@@ -518,6 +675,7 @@ body{
             🔞 Explicit Content
 
         </button>
+
 
         <button
             class="live"
@@ -530,13 +688,16 @@ body{
     </div>
 
 
-    <!-- FEATURED -->
+    <!-- =========================
+         FEATURED CONTENT
+    ========================== -->
 
     <div class="featured">
 
         <div class="featured-title">
             Featured Content
         </div>
+
 
         <div class="slider">
 
@@ -554,6 +715,7 @@ body{
 
             </button>
 
+
             <button
                 class="slider-arrow next"
                 onclick="nextSlide()">
@@ -567,7 +729,9 @@ body{
     </div>
 
 
-    <!-- VIEW MORE -->
+    <!-- =========================
+         VIEW MORE
+    ========================== -->
 
     <div class="view-more">
 
@@ -584,17 +748,20 @@ body{
 </div>
 
 
-<!-- =================================
+
+<!-- =====================================================
      POPUP
-================================= -->
+===================================================== -->
 
 <div
     class="overlay"
     id="popup">
 
+
     <div class="popup">
 
-        <!-- X -->
+
+        <!-- CLOSE -->
 
         <button
             class="popup-close"
@@ -605,31 +772,35 @@ body{
         </button>
 
 
-        <!-- GREEN TITLE -->
+        <!-- TITLE -->
 
         <div class="popup-title">
+
             Izaho29
+
         </div>
 
+
+        <!-- DESCRIPTION -->
 
         <div class="popup-description">
-            Continue to the available content by following
-            the simple steps below.
+
+            Continue to the available content
+
         </div>
 
 
-        <!-- 3 STEPS -->
+        <!-- STEPS -->
 
         <div class="steps">
 
+
             <div class="step">
 
-                <div class="step-number">
-                    1
-                </div>
+                <span>1-</span>
 
                 <div>
-                    Create a free account to continue.
+                    Create a free account to continue
                 </div>
 
             </div>
@@ -637,12 +808,10 @@ body{
 
             <div class="step">
 
-                <div class="step-number">
-                    2
-                </div>
+                <span>2-</span>
 
                 <div>
-                    Complete the available membership step.
+                    Complete the available membership step
                 </div>
 
             </div>
@@ -650,72 +819,80 @@ body{
 
             <div class="step">
 
-                <div class="step-number">
-                    3
-                </div>
+                <span>3-</span>
 
                 <div>
-                    Continue to explore the available content.
+                    Continue to explore the available content
                 </div>
 
             </div>
+
 
         </div>
 
 
-        <!-- BANNER -->
+        <!-- BANNER AREA -->
 
         <div class="popup-banner">
 
-            <span>
+            <div class="banner-text">
+
                 Continue
-            </span>
+
+            </div>
 
         </div>
 
 
-        <!-- BLACK BUTTON -->
+        <!-- BLACK PILL BUTTON -->
 
         <button
             class="popup-continue"
             onclick="closePopup()">
 
-            <span class="lock-icon">🔒</span>
+            <span class="lock-icon">
+                🔒
+            </span>
 
-            Continue
+            <span>
+                Continue
+            </span>
 
         </button>
+
 
     </div>
 
 </div>
 
 
+
 <script>
 
-/* =========================
-   POPUP
-========================= */
 
-function openPopup(){
+/* =====================================================
+   POPUP FUNCTIONS
+===================================================== */
+
+function openPopup() {
 
     document.getElementById("popup").style.display = "flex";
 
 }
 
 
-function closePopup(){
+function closePopup() {
 
     document.getElementById("popup").style.display = "none";
 
 }
 
 
-/* Click outside popup */
+/* Close when clicking outside */
 
-document.getElementById("popup").addEventListener("click", function(event){
+document.getElementById("popup").addEventListener("click", function(event) {
 
-    if(event.target === this){
+    if (event.target === this) {
 
         closePopup();
 
@@ -724,37 +901,48 @@ document.getElementById("popup").addEventListener("click", function(event){
 });
 
 
-/* =========================
+
+/* =====================================================
    SLIDER
-========================= */
+===================================================== */
 
 const slides = [
 
     "iamge/images.jpg",
+
     "iamge/images (1).jpg",
+
     "iamge/images (2).jpg",
+
     "iamge/images (3).jpg"
 
 ];
 
+
 let currentSlide = 0;
 
 
-function showSlide(index){
 
-    if(index >= slides.length){
+function showSlide(index) {
+
+    if (index >= slides.length) {
 
         currentSlide = 0;
 
-    }else if(index < 0){
+    }
+
+    else if (index < 0) {
 
         currentSlide = slides.length - 1;
 
-    }else{
+    }
+
+    else {
 
         currentSlide = index;
 
     }
+
 
     document.getElementById("slideImage").src =
         slides[currentSlide];
@@ -762,27 +950,30 @@ function showSlide(index){
 }
 
 
-function nextSlide(){
+
+function nextSlide() {
 
     showSlide(currentSlide + 1);
 
 }
 
 
-function prevSlide(){
+
+function prevSlide() {
 
     showSlide(currentSlide - 1);
 
 }
 
 
-/* Auto slide */
+/* Auto slide every 3 seconds */
 
-setInterval(function(){
+setInterval(function() {
 
     nextSlide();
 
-},3000);
+}, 3000);
+
 
 </script>
 
