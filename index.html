@@ -163,17 +163,25 @@ grid-row: 2;
     gap: 4px;
 }
 
-.stat-icon {
-    font-size: 12px;
+.stat-media {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.video-icon,
+.picture-icon {
+    font-size: 27px;
+    font-weight: 700;
+    color: #4b24b5;
     line-height: 1;
 }
 
-.video-icon {
-    color: #4b24b5;
-}
-
-.picture-icon {
-    color: #e91e63;
+.stat-text {
+    color: #d81b60;
+    font-size: 19px;
+    font-weight: 700;
 }
 
 
@@ -670,22 +678,20 @@ grid-row: 2;
 
         <div class="stat">
 
-            <strong>165</strong>
-
-            <span>
-                <span class="stat-icon video-icon">🎬</span>
-            </span>
+            <div class="stat-media">
+    <span class="video-icon">▣</span>
+    <span class="stat-text">165 videos</span>
+</div>
 
         </div>
 
 
         <div class="stat">
 
-            <strong>340</strong>
-
-            <span>
-             <span class="stat-icon picture-icon">🖼️</span>   
-            </span>
+            <div class="stat-media">
+    <span class="picture-icon">▧</span>
+    <span class="stat-text">340 photos</span>
+</div>
 
         </div>
 
