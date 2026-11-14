@@ -9,7 +9,7 @@
 <title>Izaho29 | Creator Profile</title>
 
 <style>
-:root {
+:root{
   --bg:#09090f;
   --card:#17151e;
   --pink:#fa3f91;
@@ -68,10 +68,7 @@ header{
   margin-bottom:17px;
   gap:12px;
 }
-.profile-name{
-  font-size:25px;
-  font-weight:900;
-}
+.profile-name{font-size:25px;font-weight:900}
 .profile-name span{color:var(--pink)}
 .status{
   color:#70e6a6;
@@ -103,11 +100,7 @@ header{
 .image-overlay{
   position:absolute;
   inset:0;
-  background:linear-gradient(
-    to bottom,
-    rgba(0,0,0,.04) 35%,
-    rgba(0,0,0,.8) 100%
-  );
+  background:linear-gradient(to bottom,rgba(0,0,0,.04) 35%,rgba(0,0,0,.8) 100%);
   pointer-events:none;
 }
 .image-top{
@@ -117,6 +110,7 @@ header{
   right:15px;
   display:flex;
   justify-content:space-between;
+  gap:10px;
 }
 .tag{
   background:rgba(0,0,0,.7);
@@ -129,6 +123,12 @@ header{
 .tag.pink{
   background:var(--pink);
   border-color:var(--pink);
+}
+.profile-clock{
+  font-variant-numeric:tabular-nums;
+  min-width:72px;
+  text-align:center;
+  color:#fff;
 }
 .play{
   position:absolute;
@@ -151,19 +151,9 @@ header{
   left:20px;
   right:20px;
 }
-.image-bottom h1{
-  font-size:32px;
-  margin:0 0 5px;
-}
-.image-bottom p{
-  margin:0;
-  color:#e1dce8;
-  font-size:13px;
-}
-.hero-caption{
-  padding:17px;
-  text-align:center;
-}
+.image-bottom h1{font-size:32px;margin:0 0 5px}
+.image-bottom p{margin:0;color:#e1dce8;font-size:13px}
+.hero-caption{padding:17px;text-align:center}
 .hero-caption p{
   color:var(--muted);
   margin:0 0 15px;
@@ -190,12 +180,9 @@ header{
   margin-top:10px;
 }
 
-/* SECTION */
+/* SECTIONS */
 .section{padding:32px 0}
-.section-title{
-  text-align:center;
-  margin-bottom:23px;
-}
+.section-title{text-align:center;margin-bottom:23px}
 .section-title .eyebrow{
   color:var(--pink);
   text-transform:uppercase;
@@ -215,12 +202,8 @@ header{
   max-width:580px;
 }
 
-/* HOW IT WORKS */
-.steps{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:13px;
-}
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
 .step{
   background:var(--card);
   border:1px solid var(--line);
@@ -237,22 +220,11 @@ header{
   font-weight:900;
   margin-bottom:12px;
 }
-.step h3{
-  font-size:15px;
-  margin:0 0 7px;
-}
-.step p{
-  color:var(--muted);
-  font-size:12px;
-  margin:0;
-}
+.step h3{font-size:15px;margin:0 0 7px}
+.step p{color:var(--muted);font-size:12px;margin:0}
 
 /* BENEFITS */
-.benefits{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:12px;
-}
+.benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .benefit{
   background:var(--card);
   border:1px solid var(--line);
@@ -260,19 +232,9 @@ header{
   text-align:center;
   padding:20px 10px;
 }
-.benefit-icon{
-  font-size:25px;
-  margin-bottom:8px;
-}
-.benefit strong{
-  display:block;
-  font-size:13px;
-}
-.benefit p{
-  color:var(--muted);
-  font-size:11px;
-  margin:5px 0 0;
-}
+.benefit-icon{font-size:25px;margin-bottom:8px}
+.benefit strong{display:block;font-size:13px}
+.benefit p{color:var(--muted);font-size:11px;margin:5px 0 0}
 
 /* CREATOR UPDATE */
 .update{
@@ -293,18 +255,10 @@ header{
 .update-content{flex:1;min-width:0}
 .update-name{font-weight:900;font-size:14px}
 .update-time{color:#888;font-size:10px}
-.update-content p{
-  color:#ddd8e4;
-  font-size:13px;
-  margin:9px 0 0;
-}
+.update-content p{color:#ddd8e4;font-size:13px;margin:9px 0 0}
 
 /* GALLERY */
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px;
-}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .gallery-card{
   overflow:hidden;
   border-radius:12px;
@@ -318,11 +272,7 @@ header{
   transition:transform .3s;
 }
 .gallery-card:hover img{transform:scale(1.04)}
-.gallery-caption{
-  padding:10px;
-  font-size:12px;
-  font-weight:bold;
-}
+.gallery-caption{padding:10px;font-size:12px;font-weight:bold}
 
 /* FINAL CTA */
 .final-cta{
@@ -332,15 +282,8 @@ header{
   padding:27px 20px;
   text-align:center;
 }
-.final-cta h2{
-  font-size:25px;
-  margin:0 0 8px;
-}
-.final-cta p{
-  color:#c7bacd;
-  font-size:13px;
-  margin:0 0 19px;
-}
+.final-cta h2{font-size:25px;margin:0 0 8px}
+.final-cta p{color:#c7bacd;font-size:13px;margin:0 0 19px}
 
 /* FOOTER */
 footer{
@@ -349,11 +292,7 @@ footer{
   margin-top:30px;
   text-align:center;
 }
-.footer-logo{
-  font-size:21px;
-  font-weight:900;
-  letter-spacing:2px;
-}
+.footer-logo{font-size:21px;font-weight:900;letter-spacing:2px}
 .footer-logo span{color:var(--pink)}
 .footer-note{
   color:#898495;
@@ -370,7 +309,7 @@ footer{
   color:#bbb4c5;
 }
 
-/* AGE GATE */
+/* AGE NOTICE */
 .age-gate{
   position:fixed;
   inset:0;
@@ -427,13 +366,12 @@ footer{
 
 <body>
 
-<!-- AFFILIATE LINK -->
 <script>
 const AFFILIATE_URL =
 "https://t.ajrkmx3.com/421332/8780/32504?aff_sub=Page1&source=Facebook&file_id=610753&aff_sub5=SF_006OG000004lmDN&aff_sub4=AT_0002";
 </script>
 
-<!-- AGE NOTICE -->
+<!-- AGE CONFIRMATION -->
 <div class="age-gate" id="ageGate" role="dialog" aria-modal="true">
   <div class="age-box">
     <div style="font-size:38px">🔞</div>
@@ -476,7 +414,7 @@ const AFFILIATE_URL =
 
       <div class="image-top">
         <span class="tag pink">18+ CREATOR</span>
-        <span class="tag">FEATURED PROFILE</span>
+        <span class="tag profile-clock" id="profileClock">14:23</span>
       </div>
 
       <div class="play">▶</div>
@@ -501,7 +439,7 @@ const AFFILIATE_URL =
   </div>
 </section>
 
-<!-- ACCESS INSTRUCTIONS -->
+<!-- ACCESS GUIDE -->
 <section class="section" id="access">
   <div class="container">
 
@@ -701,14 +639,14 @@ const AFFILIATE_URL =
 
 <script>
 
-// Affiliate links
+// AFFILIATE LINKS
 document.querySelectorAll(".affiliate-link").forEach(link=>{
   link.href=AFFILIATE_URL;
   link.target="_blank";
   link.rel="sponsored nofollow noopener noreferrer";
 });
 
-// Age confirmation
+// AGE CONFIRMATION
 const gate=document.getElementById("ageGate");
 const error=document.getElementById("ageError");
 
@@ -729,8 +667,41 @@ document.getElementById("ageNo").addEventListener("click",()=>{
   error.textContent="You must meet the legal age requirement to continue.";
 });
 
-// Year
-document.getElementById("year").textContent=new Date().getFullYear();
+// CONTINUOUS PROFILE TIMER
+// 14:23 to 14:50, then repeat continuously.
+
+const clockElement=document.getElementById("profileClock");
+
+const START_MINUTES=14*60+23;
+const END_MINUTES=14*60+50;
+const CYCLE_LENGTH=(END_MINUTES-START_MINUTES)+1;
+
+const clockStartTime=Date.now();
+
+function updateProfileClock(){
+
+  const elapsedMinutes=Math.floor(
+    (Date.now()-clockStartTime)/60000
+  );
+
+  const currentMinutes=
+    START_MINUTES+(elapsedMinutes%CYCLE_LENGTH);
+
+  const hours=Math.floor(currentMinutes/60);
+  const minutes=currentMinutes%60;
+
+  clockElement.textContent=
+    String(hours).padStart(2,"0")+":"+
+    String(minutes).padStart(2,"0");
+}
+
+updateProfileClock();
+
+setInterval(updateProfileClock,1000);
+
+// CURRENT YEAR
+document.getElementById("year").textContent=
+  new Date().getFullYear();
 
 </script>
 
