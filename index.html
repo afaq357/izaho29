@@ -312,7 +312,7 @@
                 fetchpriority="high"
               >
               <div class="player-image-shade" aria-hidden="true"></div>
-              <div class="player-top"><span class="tag rec">● DEMO</span><span class="tag quality">PREVIEW MODE</span><span class="tag timer">◷ 06:21</span></div>
+              <div class="player-top"><span class="tag rec">● LIVE</span><span class="tag quality">PREVIEW MODE</span><span class="tag timer">◷ 06:21</span></div>
               <div class="model-head" aria-hidden="true"></div><div class="model-silhouette" aria-hidden="true"></div>
               <div class="player-center">
                 <button class="play-btn" id="playBtn" aria-label="Play demo preview">▶</button>
@@ -495,6 +495,23 @@
       event.preventDefault();
       $('#loginMessage').textContent = 'Demo only. No login request was sent.';
     });
+    // Automatic timer: 06:21 to 07:00
+const previewTimer = $('.tag.timer');
+let previewSeconds = 6 * 60 + 21;
+
+function updatePreviewTimer() {
+  const minutes = Math.floor(previewSeconds / 60);
+  const seconds = String(previewSeconds % 60).padStart(2, '0');
+
+  previewTimer.textContent = `◷ ${minutes}:${seconds}`;
+
+  previewSeconds = previewSeconds >= 420
+    ? 381
+    : previewSeconds + 1;
+}
+
+updatePreviewTimer();
+setInterval(updatePreviewTimer, 1000);
     $('#year').textContent = new Date().getFullYear();
   </script>
 </body>
