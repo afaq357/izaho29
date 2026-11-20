@@ -224,8 +224,6 @@
     .preview-art::before { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(180deg, rgba(5,6,12,.04) 35%, rgba(5,6,12,.72) 100%); }
     .preview-card:nth-child(2n) .preview-art { background: radial-gradient(ellipse at 50% 28%, rgba(204,179,255,.4), transparent 24%), linear-gradient(145deg, #35324e, #202237 55%, #10131e); }
     .preview-card:nth-child(3n) .preview-art { background: radial-gradient(ellipse at 50% 28%, rgba(255,214,174,.4), transparent 24%), linear-gradient(145deg, #55413e, #252237 55%, #10131e); }
-    .preview-art::before { content: ""; position: absolute; width: 64px; height: 80px; border-radius: 48% 48% 42% 42%; left: calc(50% - 32px); top: 18px; background: linear-gradient(135deg, rgba(255,224,219,.62), rgba(146,104,145,.55)); box-shadow: 0 0 0 11px rgba(20,15,28,.42); }
-    .preview-art::after { content: ""; position: absolute; width: 122px; height: 136px; left: calc(50% - 61px); top: 88px; border-radius: 48% 48% 10% 10%; background: linear-gradient(180deg, rgba(226,177,190,.55), rgba(49,37,61,.8)); clip-path: polygon(30% 0,70% 0,100% 100%,0 100%); }
     .duration { position: absolute; top: 10px; left: 10px; padding: 5px 8px; background: rgba(4,5,10,.75); border-radius: 7px; font-size: 10px; font-weight: 850; z-index: 2; }
     .preview-play { position: absolute; z-index: 2; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 46px; height: 46px; border: 3px solid white; border-radius: 50%; display: grid; place-items: center; color: white; background: rgba(10,10,18,.35); font-size: 17px; padding-left: 3px; }
     .lock { position: absolute; z-index: 2; right: 10px; bottom: 10px; width: 31px; height: 31px; display: grid; place-items: center; border-radius: 9px; background: var(--pink); font-size: 14px; }
@@ -327,9 +325,7 @@
       .avatar { width: 52px; height: 52px; }
       .timestamp { grid-column: 2; margin-top: -6px; }
       .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
-      .preview-card { min-height: 188px; border-radius: 15px; }
-      .preview-art::before { width: 56px; height: 70px; left: calc(50% - 28px); top: 16px; box-shadow: 0 0 0 9px rgba(20,15,28,.42); }
-      .preview-art::after { width: 106px; height: 118px; left: calc(50% - 53px); top: 76px; }
+      .preview-card { min-height: 188px; border-rad
       .preview-play { width: 42px; height: 42px; font-size: 15px; }
       .wide-cta { padding: 18px; }
       .wide-cta p { font-size: 9px; }
